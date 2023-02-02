@@ -1,1 +1,2 @@
-# core-code-from-scratch-readme-week-9
+# Diego Orellana - CoreCode Bootcamp 🚀
+## JavaScript - Week 9
