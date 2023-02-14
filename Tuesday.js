@@ -52,8 +52,30 @@ console.log(test.fullName);
 /* ==========
 * Exercise 2: "Who likes it?"
 ========== */
+const names = ["Alex", "Jacob", "Mark", "Max"];
 
+function likesCount(names) {
+    return (names.length === 1) ? `${names[0]} likes this`
+        : (names.length === 2) ? `${names[0]} and ${names[1]} like this`
+        : (names.length === 3) ? `${names[0]}, ${names[1]} and ${names[2]} like this`
+        : (names.length >= 4) ? `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+        : 'No one likes this';
+}
+
+console.log(likesCount(names));
 
 /* ==========
 * Exercise 3: Convert string to camel case
 ========== */
+function toCamelCase(string) {
+    let result = ''
+
+    for (let i = 0; i < string.length; i++) {
+        if( (string[i - 1] === '-') || (string[i - 1] === '_') ) {
+            result += string[i].toUpperCase();
+        } else if ( (string[i] !== '-') && (string[i] !== '_') ) {
+            result += string[i];
+        }
+    }
+    return result
+}
